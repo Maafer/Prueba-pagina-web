@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="EstiloParcial2.css">
+</head>
+<body>
+
+    <header>
+        <img src="Logo-Lumbre.png" alt="Logo-Lumbre">
+        <nav>
+            <a href="Parcial2.html" class="boton-principal">Inicio</a>
+        </nav>
+    </header>
+
+    <div class="contenedor-formulario">
+        <h2>Contacto</h2>
+
+        <form action="/procesar-datos-de-prueba" method="post">
+            <p>*(Nota: La acción real del formulario es simulada, no enviará datos reales a un servidor)*</p>
+
+            <div class="grupo-control">
+                <label for="nombre_completo">Nombre Completo:</label>
+                <input type="text" id="nombre_completo" name="nombre_completo" required>
+            </div>
+
+            <div class="grupo-control">
+                <label for="correo_usuario">Correo Electrónico (email):</label>
+                <input type="email" id="correo_usuario" name="correo_usuario" placeholder="ejemplo@dominio.com" required>
+            </div>
+
+            <div class="grupo-control">
+                <label for="enlace_web">Sitio Web Personal (url):</label>
+                <input type="url" id="enlace_web" name="enlace_web" placeholder="https://www.misitio.com">
+            </div>
+
+            <div class="grupo-control">
+                <label for="telefono_contacto">Telefono (Tel):</label>
+                <input type="tel" id="telefono_contacto" name="telefono_contacto" placeholder="(000) 000-00-00">
+            </div>
+            
+            <div class="grupo-control">
+                <label for="busqueda_sitio">Buscar en el sitio (search):</label>
+                <input type="search" id="busqueda_sitio" name="busqueda_sitio" placeholder="Escriba aquí su contenido">
+            </div>
+
+            <div class="grupo-control">
+                <label for="edad">Edad (number):</label>
+                <input type="number" id="edad" name="edad" min="1" max="80" step="1" value="1">
+            </div>
+
+            <div class="grupo-control">
+                <label for="calificación_servicio">Nivel de satisfacción (range 1 to 10):</label>
+                <input type="range" id="calificación_servicio" name="calificación_servicio" min="1" max="10" step="1" value="5">
+            </div>
+
+            <input type="submit" value="Enviar datos de prueba">
+
+        </form>
+        </div>
+        
+        <footer>
+            <p>&copy; 2025 Lumbre Café. Todos los derechos reservados.</p>
+        </footer>
+</body>
+</html>

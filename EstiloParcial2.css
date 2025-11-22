@@ -1,0 +1,201 @@
+/* Estilo general */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Montserrat', Arial, Helvetica, sans-serif;
+  background-color: #feece0;
+  color: #432412;
+  line-height: 1.6;
+  padding: 15px;
+  background-image: url(Patron-Lumbre.png);
+}
+
+/*Encabezado y navegación*/
+header {
+  background-color: #e5231f;
+  color: #feece0;
+  padding: 15px;
+  border-radius: 3px;
+  box-shadow: 2px 2px 5px rgba(0,0,0,0.2);
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+nav {
+  padding: 10px 0;
+  text-align: center;
+}
+
+ul{
+  text-decoration: none;
+  list-style: none;
+}
+
+nav {
+  color: #feece0;
+  text-decoration: none;
+  font-weight: bold;
+  margin: 0 15px;
+  border-radius: 3px;
+}
+
+a {
+  color: #432412;
+  text-decoration: none;
+  font-weight: bold;
+  margin: 0 15px;
+  border-radius: 3px;
+}
+
+/*Contenedor principal*/
+.contenedor-principal {
+  display: grid;
+  grid-template-columns: 1fr 2fr 1fr;
+  gap: 15px;
+  margin-bottom: 10px;
+}
+
+/*Aside*/
+aside {
+  background-color: #fff5ee;
+  flex-grow: 1; /* Ocupa 1 parte del espacio disponible (1/4) de la */
+  padding: 20px;
+  margin-left: 20px; /*Separacion entre el section y el aside */
+  margin-right: 20px;
+  border-radius: 3px;
+}
+
+/*Sección principal*/
+section {
+  border-radius: 3px;
+  padding: 15px;
+  box-shadow: 2px 2px 5px rgba(0,0,0,0.1);
+}
+
+/*Footer*/
+footer {
+  text-align: center;
+  background-color: #304b9a;
+  color: #feece0;
+  padding: 15px;
+  border-radius: 3px;
+  box-shadow: 2px 2px 5px rgba(0,0,0,0.2);
+}
+
+/*Botón principal*/
+.boton-principal {
+  background-color: #432412;
+  color: #feece0;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 3px;
+  cursor: pointer;
+  box-shadow: 2px 2px 5px rgba(0,0,0,0.2);
+  transition: all 0.3s ease;
+  font-weight: bold;
+}
+
+.boton-principal:hover{ /*Para dar estilo cuando tocas al elemento*/
+    background-color: #304b9a;
+    color: #feece0;
+}
+
+.boton-principal:active{ /*Para dae estilo cuando activas o das lick al elemento*/
+    background-color: #432412;
+    color: #feece0;
+    top: 1px;
+}
+
+/*Títulos*/
+h1, h2, h3, h4 {
+  margin-bottom: 10px;
+  color: #432412;
+}
+
+h1 {
+  color: #feece0;
+  font-size: 2em;
+  font-weight: 800;
+}
+
+h2 {
+  font-size: 1.5em;
+  font-weight: 700;
+}
+
+h3 {
+  font-size: 1.2em;
+  font-weight: 600;
+}
+
+h4 {
+  font-size: 1em;
+  font-weight: 600;
+}
+
+.imagen-articulo {
+  max-width: 100%; /*Asegura que la imagen no se desborde del contenedror*/
+  height: auto;
+  border-radius: 3px;
+  padding-top: 7px;
+}
+
+figcaption{
+  font-size: 0.7em;
+}
+
+.entrada-blog {
+  background-color: #feece0; /* Fondo para el articulo */
+  padding: 15px;
+  margin-bottom: 25px; /*Separación entre artículos */
+  border: 1px solid #432412; 
+  border-radius: 5px;
+  box-shadow: 2px 2px 5px #304b9a;
+}
+.contenedor-formulario { 
+      max-width: 650px; /*Limita el ancho del formulario a un máximo de 650 píxeles*/
+      margin: 20px auto; /*centrar el contenedor horizontalmente en la página. Aplica 20px de margen arriba y abajo, y auto a los lados.*/
+      background: white; 
+      padding: 30px;/*Agrega un espacio interno de 30 píxeles, separando el contenido del formulario de sus propios bordes.*/
+      border-radius: 10px; 
+      box-shadow: 0 4px 12px rgba(19, 18, 19, 0.1); 
+    }
+
+.grupo-control {
+      margin-bottom: 25px;
+      border-left: 5px solid #E74C3C;
+      padding-left: 15px; } /* Margin Bottom: Crea un buen espacio vertical entre cada campo del formulario.*/
+
+      label { display: block;/*display: block: Hace que la etiqueta ocupe todo el ancho disponible, forzando al campo de entrada (<input>) a comenzar en una nueva línea.*/ }
+
+input:not([type="submit"]):not([type="range"]) { /*Este selector aplica los estilos a TODOS los campos <input> excepto a los de tipo submit (el botón de envío) y range (el deslizador), ya que estos tienen estilos especiales.*/
+      width: 100%; /*Hace que los campos de texto ocupen todo el ancho disponible del contenedor.*/
+      padding: 10px; 
+      border: 1px solid #BDC3C7; 
+      border-radius: 5px; 
+      box-sizing: border-box;/*Asegura que el padding y el border se incluyan dentro del ancho (width: 100%) y no lo expandan, lo que prevendría desbordamientos.*/
+      transition: border-color 0.3s;/*Prepara el campo para una animación suave cuando cambie el color del borde.*/
+    }
+    input:focus { border-color: #304b9a; outline: none; } /*Estos estilos se aplican cuando el campo está seleccionado
+     o activo (cuando el usuario está escribiendo en él).
+     Cambia el color del borde a azul (#3498DB) para dar una clara indicación de qué campo está activo.*/
+    
+    input[type="submit"] { /*Selecciona específicamente el botón de envío.*/
+      background-color: #e5231f; 
+      color: white; 
+      padding: 12px 25px; 
+      border: none; 
+      border-radius: 5px; 
+      cursor: pointer; /*Cambia el cursor a una mano, indicando que es un elemento en el que se puede hacer clic.*/
+      font-size: 1em; 
+      font-weight: bold;
+      transition: background-color 0.3s;
+}
+input[type="submit"]:hover { background-color: #e5231f; } /*Cuando el ratón pasa por encima del botón, el background-color cambia a un verde ligeramente más oscuro (#27AD60),proporcionando una retroalimentación visual al usuario.*/
+
+/* Estilos específicos para Range */
+input[type="range"] { width: 100%; margin-top: 5px; } /*Estilos mínimos específicos para el control de rango, asegurando que también ocupe el 100% del ancho.*/
